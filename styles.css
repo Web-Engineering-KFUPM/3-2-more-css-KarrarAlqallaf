@@ -75,17 +75,46 @@
    - For the .inline-label class: make it behave like an inline-block element with small padding and a border.
    - For the .inline-label.alt class: ensure it stays inline with others but use a different border style.
 */
-
+.inline-label {
+    display:inline-block;
+    padding:0.6rem 0.6rem;
+    border:3px solid rgba(0,0,0,0.15);
+    border-radius:12px;
+    margin-right:0.25rem;
+}
 /* TODO 5:
    - For the .copy .title class: choose a font-size (use rem), a font-weight between 600–700, 
      and apply text-transform: capitalize.
    - For the .copy .intro class: set the font-style to italic and slightly increase the line-height.
+
    - For the .copy .sample-text class: define a font-family stack (include a serif fallback) 
      and use relative sizing with em (e.g., 1.1em).
+
    - For the .cta-link class: remove the underline, set the color to the brand variable, 
      and add a hover style (underline + darker color using rgb/hex/hsl).
 */
-
+.copy .title{
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin: 0.5rem 0;
+}
+.copy .intro {
+    font-style: italic;
+    line-height: 2.5rem;
+}
+.copy .sample-text{
+    font-family: "Cascadia Code", serif;
+    font-size: 1.1rem;
+}
+.cta-link {
+    text-decoration: none;
+    color: var(--brand);
+}
+.cta-link:hover {
+    text-decoration: underline;
+    color: rgb(0, 27, 78);
+}
 /* TODO 6:
    - For the .box class: set a fixed width (e.g., 120px) and height (e.g., 80px), 
      add padding and a visible border.
@@ -95,6 +124,26 @@
    - For the .b2 class: apply a unique background or border style.
    - For the .b3 class: apply a unique background or border style.
 */
+.box {
+    width: 120px;
+    height: 80px;
+    padding: 20px;
+    border: 2px solid #ff0000;
+    border-width: 1rem;
+    border-radius: 12px;
+
+}
+.b1 {
+    background: rgba(0, 255, 19, 0.47);
+}
+
+.b2 {
+    background: rgba(183, 255, 0, 0.52);
+}
+
+.b3 {
+    background: rgba(132, 0, 255, 0.47);
+}
 
 /* TODO 7:
    - For the .toolbar class: make it a flex container, distribute items with space-between, 
