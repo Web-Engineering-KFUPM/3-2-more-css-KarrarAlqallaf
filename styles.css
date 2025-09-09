@@ -7,19 +7,70 @@
   - Define CSS variables on :root for brand colors.
   - Apply a global box-sizing reset using the universal selector (hint use * selector).
 */
+:root {
+    /* TODO: sett --brand, --muted, --bg, --card */
+    --brand: hsl(221 83% 53%);
+    --muted: #6b7280;
+    --bg: #f6f7fb;
+    --card: rgba(181, 210, 244, 0.42);
+}
+* {
+    /* TODO: sett box-sizing: border-box; */
+    box-sizing: border-box;
+}
 
 /* TODO 2:
    -Give .site-header & .site-footer a subtle background using var(--card)
    -Make the .tagline class a bit muted (use var(--muted))
    -Add a soft box-shadow to .card class
 */
+.site-header, .site-footer {
+    /* TODO: add subtle background using var(--card) */
+    text-align:center;
+    padding:1.25rem;
+    background: var(--card);
+}
+
+.tagline {
+    /* TODO: set color: var(--muted) */
+    color: var(--muted);
+}
+
+.card {
+    /* TODO: add a soft box-shadow */
+    background: var(--card);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-block: 1rem;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
 
 /* TODO 3:
    - Set the color to the brand variable and make the text bold for the .color-demo .color-note class.
    - Set the color to var(--muted) and the font size to 0.95rem for the .color-demo .muted class.
    - Create a 100% width block with a minimum height of 80px, a background color of your choice, and an optional background gradient for the .bg-sample class.
 */
+.color-demo,.color-note{
+    color: var(--brand);
+    font-weight: 700;
+}
+.color-demo .muted {
+    /* TODO: color: var(--muted); font-size: 0.95rem; */
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+.bg-sample {
+    width: 100%;
+    min-height: 80%;
+    background: linear-gradient(180deg, hsla(125, 53%, 64%, 0.47), hsla(212, 74%, 83%, 0.42));
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    color: #374151;
 
+}
 /* TODO 4:
    - For the .inline-label class: make it behave like an inline-block element with small padding and a border.
    - For the .inline-label.alt class: ensure it stays inline with others but use a different border style.
